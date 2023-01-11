@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
@@ -103,6 +103,8 @@ def edit_post(post_id):
     return render_template("make-post.html", form=edit_form, edit=True)
 
 
+@app.route("/delete")
+def delete():
 
 
 
